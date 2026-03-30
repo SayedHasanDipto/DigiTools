@@ -6,7 +6,7 @@ import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
     return (
         <div className='border-b border-gray-200 shadow manrope'>
-            <div className='container mx-auto my-2'>
+            <div className='max-w-7xl mx-auto my-2'>
                 <div className="navbar">
                     <div className="navbar-start">
                         <a href="" className='text-3xl font-bold text-[#f43098]'>DigiTools</a>
