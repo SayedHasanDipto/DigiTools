@@ -1,11 +1,12 @@
 import React from 'react';
+import "./Navbar.css";
 import { FiShoppingCart } from "react-icons/fi";
 
 
 const Navbar = () => {
     return (
-        <div className='border-b pb-4 border-gray-200 shadow'>
-            <div className='container mx-auto mt-6'>
+        <div className='border-b border-gray-200 shadow manrope'>
+            <div className='container mx-auto my-2'>
                 <div className="navbar">
                     <div className="navbar-start">
                         <a href="" className='text-3xl font-bold text-[#f43098]'>DigiTools</a>
