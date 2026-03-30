@@ -1,11 +1,17 @@
 import './App.css'
+import HeroSection from './component/HeroSection'
 import Navbar from './component/Navbar'
 
 function App() {
 
   return (
     <>
-      <Navbar></Navbar>
+      <header>
+        <Navbar></Navbar>
+      </header>
+      <main className='manrope'>
+        <HeroSection></HeroSection>
+      </main>
     </>
   )
 }

@@ -22,8 +22,8 @@ const Navbar = () => {
                     </div>
                     <div className="navbar-end gap-4">
                         <button className='hover:bg-[#f43098] duration-150 ease-in hover:text-white w-8 scale-125 flex items-center justify-center rounded-full h-8'><FiShoppingCart /></button>
-                        <button className='font-semibold font-lg btn btn-secondary text-black hover:text-white btn-ghost rounded-full'>Login</button>
-                        <button className='font-semibold text-white font-lg btn rounded-full btn-secondary'>Get Started</button>
+                        <button className='font-semibold font-lg btn btn-secondary text-black hover:text-white btn-ghost rounded-full h-[2.5rem]'>Login</button>
+                        <button className='font-semibold text-white font-lg btn rounded-full btn-secondary h-[2.5rem]'>Get Started</button>
                     </div>
                 </div>
             </div>
