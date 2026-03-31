@@ -5,12 +5,12 @@ import packageImg from '../assets/package.png'
 
 const Begain = () => {
     return (
-        <div className='min-h-screen flex-col gap-10 flex items-center justify-center bg-[#F9FAFC]'>
+        <div className='min-h-screen flex-col gap-10 flex items-center max-sm:mt-12 justify-center bg-[#F9FAFC]'>
             <div className='max-w-7xl mx-auto text-center'>
-                <h1 className='text-[#101727] font-extrabold text-5xl mb-4'>Get Started in 3 Steps</h1>
-                <p className='text-[#627382] leading-5'>Start using premium digital tools in minutes, not hours.</p>
+                <h1 className='text-[#101727] font-extrabold text-5xl max-sm:text-3xl max-sm:text-center mb-4'>Get Started in 3 Steps</h1>
+                <p className='text-[#627382] leading-5 max-sm:w-[80%]'>Start using premium digital tools in minutes, not hours.</p>
             </div>
-            <div className='flex gap-8 mt-6'>
+            <div className='flex max-sm:flex-col gap-8 mt-6'>
                 <div className='w-95 h-95  flex items-center justify-center flex-col p-6'>
                     <div className="text-center flex flex-col justify-center items-center relative p-12">
                         <span className="badge badge-secondary absolute top-0 right-0">01</span>
@@ -25,7 +25,7 @@ const Begain = () => {
                 </div>
                 <div className='w-95 h-95  flex items-center justify-center flex-col p-6'>
                     <div className="text-center flex flex-col justify-center items-center relative p-12">
-                        <span className="badge badge-secondary absolute top-0 right-0">01</span>
+                        <span className="badge badge-secondary absolute top-0 right-0">02</span>
                         <div className='flex items-center justify-center flex-col'>
                             <div className='bg-[#f430991c] mb-4 rounded-full w-20 h-20 flex items-center justify-center'>
                                 <img src={packageImg} alt="packageImg" />
@@ -37,7 +37,7 @@ const Begain = () => {
                 </div>
                 <div className='w-95 h-95  flex items-center justify-center flex-col p-6'>
                     <div className="text-center flex flex-col justify-center items-center relative p-12">
-                        <span className="badge badge-secondary absolute top-0 right-0">01</span>
+                        <span className="badge badge-secondary absolute top-0 right-0">03</span>
                         <div className='flex items-center justify-center flex-col'>
                             <div className='bg-[#f430991c] mb-4 rounded-full w-20 h-20 flex items-center justify-center'>
                                 <img src={rocketImg} alt="rocketImg" />
