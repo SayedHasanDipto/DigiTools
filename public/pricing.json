@@ -1,0 +1,82 @@
+[
+    {
+        "id": "starter",
+        "planName": "Starter",
+        "tagline": "Perfect for getting started",
+        "price": 0,
+        "currency": "$",
+        "billing": "Month",
+        "isPopular": false,
+        "features": [
+            "Access to 10 free tools",
+            "Basic templates",
+            "Community support",
+            "1 project per month"
+        ],
+        "button": {
+            "text": "Get Started Free",
+            "action": "/signup",
+            "type": "primary"
+        },
+        "style": {
+            "background": "light",
+            "gradient": false
+        }
+    },
+    {
+        "id": "pro",
+        "planName": "Pro",
+        "tagline": "Best for professionals",
+        "price": 29,
+        "currency": "$",
+        "billing": "Month",
+        "isPopular": true,
+        "badge": "Most Popular",
+        "features": [
+            "Access to all premium tools",
+            "Unlimited templates",
+            "Priority support",
+            "Unlimited projects",
+            "Cloud sync",
+            "Advanced analytics"
+        ],
+        "button": {
+            "text": "Start Pro Trial",
+            "action": "/trial",
+            "type": "secondary"
+        },
+        "style": {
+            "background": "gradient",
+            "gradientColors": [
+                "#6a11cb",
+                "#2575fc"
+            ]
+        }
+    },
+    {
+        "id": "enterprise",
+        "planName": "Enterprise",
+        "tagline": "For teams and businesses",
+        "price": 99,
+        "currency": "$",
+        "billing": "Month",
+        "isPopular": false,
+        "features": [
+            "Everything in Pro",
+            "Team collaboration",
+            "Custom integrations",
+            "Dedicated support",
+            "SLA guarantee",
+            "Custom branding"
+        ],
+        "button": {
+            "text": "Contact Sales",
+            "action": "/contact",
+            "type": "primary"
+        },
+        "style": {
+            "background": "light",
+            "gradient": false
+        }
+    }
+]

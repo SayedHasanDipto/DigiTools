@@ -1,11 +1,24 @@
+import { Suspense } from 'react'
 import './App.css'
 import Begain from './component/Begain'
 import HeroSection from './component/HeroSection'
 import Navbar from './component/Navbar'
+import Pricing from './component/Pricing'
 import Spliter from './component/Spliter'
 import Workflow from './component/Workflow'
 
+
+
+const pricingData = async () => {
+  const res = await fetch("/pricing.json");
+  return res.json();
+}
+
+
+
 function App() {
+
+  const pricingPromise = pricingData();
 
   return (
     <>
@@ -16,8 +29,11 @@ function App() {
         <HeroSection></HeroSection>
         <Spliter></Spliter>
         <Begain></Begain>
-        <Workflow></Workflow>
-      </main>
+        <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>
+        }>
+          <Pricing pricingPromise={pricingPromise}></Pricing>
+        </Suspense>
+      </main >
     </>
   )
 }
