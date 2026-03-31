@@ -16,7 +16,7 @@ const HeroSection = () => {
                         <h1 className='color font-medium'>New: AI-Powered Tools Available</h1>
                     </div>
                 </button>
-                <h1 className='text-7xl max-sm:text-xl max-sm:text-[3rem] max-sm:w-100 max-sm:text-center font-extrabold text-[#101727] w-2xl leading-20 mb-4'>Supercharge Your Digital Workflow</h1>
+                <h1 className='text-7xl max-sm:text-5xl max-lg:w-120 max-lg:text-[3rem] max-sm:w-100 max-sm:text-center font-extrabold text-[#101727] w-2xl leading-20 max-lg:leading-15 mb-4'>Supercharge Your Digital Workflow</h1>
                 <p className='text-lg w-lg leading-8 max-sm:w-88 max-sm:mx-auto max-sm:text-lg'>
                     Access premium AI tools, design assets, templates, and productivity
                     software—all in one place. Start creating faster today. Explore Products
@@ -26,8 +26,8 @@ const HeroSection = () => {
                     <button className='font-semibold font-lg h-12 btn btn-secondary btn-outline rounded-full hover:text-white flex gap-2 items-center'><CiPlay1 className='scale-125' /> Watch Demo</button>
                 </div>
             </div>
-            <div className='w-10/12 mx-auto'>
-                <img className='w-full' src={heroImg} alt="" />
+            <div>
+                <img className='w-full max-lg:w-80' src={heroImg} alt="" />
             </div>
         </div>
     );
