@@ -29,10 +29,10 @@ function App() {
         <HeroSection></HeroSection>
         <Spliter></Spliter>
         <Begain></Begain>
-        <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>
-        }>
+        <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
           <Pricing pricingPromise={pricingPromise}></Pricing>
         </Suspense>
+        <Workflow></Workflow>
       </main >
     </>
   )
