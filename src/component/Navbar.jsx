@@ -9,10 +9,10 @@ const Navbar = () => {
             <div className='max-w-7xl mx-auto my-2'>
                 <div className="navbar">
                     <div className="navbar-start">
-                        <a href="" className='text-3xl font-bold text-[#f43098]'>DigiTools</a>
+                        <a href="" className='text-3xl max-sm:text-xl font-bold text-[#f43098]'>DigiTools</a>
                     </div>
                     <div className="navbar-center">
-                        <ul className='hidden md:flex items-center justify-center gap-8 text-lg'>
+                        <ul className='hidden lg:flex items-center justify-center gap-8 text-lg'>
                             <li><a href="/Products" className='font-semibold btn btn-secondary text-black hover:text-white btn-ghost'>Products</a></li>
                             <li><a href="Features" className='font-semibold btn btn-secondary text-black hover:text-white btn-ghost'>Features</a></li>
                             <li><a href="/Pricing" className='font-semibold btn btn-secondary text-black hover:text-white btn-ghost'>Pricing</a></li>

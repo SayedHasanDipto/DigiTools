@@ -10,20 +10,20 @@ const Begain = () => {
                 <h1 className='text-[#101727] font-extrabold text-5xl max-sm:text-3xl max-sm:text-center mb-4'>Get Started in 3 Steps</h1>
                 <p className='text-[#627382] leading-5 max-sm:w-[80%]'>Start using premium digital tools in minutes, not hours.</p>
             </div>
-            <div className='flex max-sm:flex-col gap-8 mt-6'>
-                <div className='w-95 h-95  flex items-center justify-center flex-col p-6'>
+            <div className='grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 max-md::gap-8 mt-6 mx-auto'>
+                <div className='w-95 h-95  flex items-center justify-center flex-col p-6 max-sm:w-full'>
                     <div className="text-center flex flex-col justify-center items-center relative p-12">
                         <span className="badge badge-secondary absolute top-0 right-0">01</span>
                         <div className='flex items-center justify-center flex-col'>
                             <div className='bg-[#f430991c] mb-4 rounded-full w-20 h-20 flex items-center justify-center'>
-                                <img src={userImg} alt="userImg" />
+                                <img src={userImg} alt="rocketImg" />
                             </div>
                             <h1 className='font-bold text-2xl text-[#101727] mb-4'>Create Account</h1>
                             <p className='text-[#627382]'>Sign up for free in seconds. No credit card required to get started.</p>
                         </div>
                     </div>
                 </div>
-                <div className='w-95 h-95  flex items-center justify-center flex-col p-6'>
+                <div className='w-95 h-95  flex items-center justify-center flex-col p-6 max-sm:w-full'>
                     <div className="text-center flex flex-col justify-center items-center relative p-12">
                         <span className="badge badge-secondary absolute top-0 right-0">02</span>
                         <div className='flex items-center justify-center flex-col'>
@@ -35,7 +35,7 @@ const Begain = () => {
                         </div>
                     </div>
                 </div>
-                <div className='w-95 h-95  flex items-center justify-center flex-col p-6'>
+                <div className='w-95 h-95  flex items-center justify-center flex-col p-6 max-sm:w-full'>
                     <div className="text-center flex flex-col justify-center items-center relative p-12">
                         <span className="badge badge-secondary absolute top-0 right-0">03</span>
                         <div className='flex items-center justify-center flex-col'>

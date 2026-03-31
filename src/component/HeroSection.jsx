@@ -8,7 +8,7 @@ import { CiPlay1 } from "react-icons/ci";
 
 const HeroSection = () => {
     return (
-        <div className="hero max-w-7xl mx-auto flex justify-between items-center min-h-0 lg:min-h-screen h-auto py-20 lg:py-0 manrope">
+        <div className="hero max-w-7xl mx-auto flex max-sm:flex-col max-sm:gap-10 justify-between items-center min-h-0 lg:min-h-screen h-auto py-20 lg:py-0 manrope">
             <div>
                 <button className='mb-2 py-0 px-0 rounded-full animate-bounce max-sm:ml-8'>
                     <div className='flex items-center justify-center gap-2 py-2 px-4 rounded-full bg-[#E1E7FF]'>
@@ -26,8 +26,8 @@ const HeroSection = () => {
                     <button className='font-semibold font-lg h-12 btn btn-secondary btn-outline rounded-full hover:text-white flex gap-2 items-center'><CiPlay1 className='scale-125' /> Watch Demo</button>
                 </div>
             </div>
-            <div className='max-md:hidden'>
-                <img src={heroImg} alt="" />
+            <div className='w-10/12 mx-auto'>
+                <img className='w-full' src={heroImg} alt="" />
             </div>
         </div>
     );
