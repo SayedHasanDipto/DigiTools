@@ -1,6 +1,7 @@
 import './App.css'
 import HeroSection from './component/HeroSection'
 import Navbar from './component/Navbar'
+import Spliter from './component/Spliter'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       </header>
       <main className='manrope'>
         <HeroSection></HeroSection>
+        <Spliter></Spliter>
       </main>
     </>
   )
