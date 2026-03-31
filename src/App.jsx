@@ -6,6 +6,7 @@ import Navbar from './component/Navbar'
 import Pricing from './component/Pricing'
 import Spliter from './component/Spliter'
 import Workflow from './component/Workflow'
+import Footer from './component/Footer'
 
 
 
@@ -34,6 +35,9 @@ function App() {
         </Suspense>
         <Workflow></Workflow>
       </main >
+      <footer>
+        <Footer></Footer>
+      </footer>
     </>
   )
 }
