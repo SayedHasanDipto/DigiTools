@@ -1,4 +1,4 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Begain from './component/Begain'
 import HeroSection from './component/HeroSection'
@@ -24,6 +24,9 @@ function App() {
   const toolsPrice = toosPriceData();
   // console.log(toolsPrice);
 
+  const [activeTab, setActiveTab] = useState("tools");
+  console.log(activeTab);
+
   return (
     <>
       <header>
@@ -33,8 +36,8 @@ function App() {
         <HeroSection></HeroSection>
         <Spliter></Spliter>
         <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
-          <Tools toolsPrice={toolsPrice}></Tools>
-          <Cart></Cart>
+          {activeTab === "tools" && < Tools setActiveTab={setActiveTab} toolsPrice={toolsPrice}></Tools>}
+          {activeTab === "cart" && <Cart></Cart>}
         </Suspense>
         <Begain></Begain>
         <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>

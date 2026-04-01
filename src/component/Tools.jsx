@@ -2,7 +2,7 @@ import React, { use } from 'react';
 import ToolsCard from './ToolsCard';
 import { useState } from 'react';
 
-const Tools = ({ toolsPrice }) => {
+const Tools = ({ toolsPrice, setActiveTab }) => {
     // console.log(toolsPrice);
     const data = use(toolsPrice);
     // console.log(data);
@@ -20,7 +20,11 @@ const Tools = ({ toolsPrice }) => {
                 <p className='text-[#627382] w-136 max-sm:w-96 mx-auto leading-6'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
                 <div className='flex w-60 h-14 mx-auto justify-around items-center gap-4 bg-base-300 rounded-full'>
                     <button className='font-semibold text-white font-lg btn rounded-full btn-secondary h-11'>Products</button>
-                    <button className='font-semibold font-lg btn btn-secondary text-black hover:text-white btn-ghost rounded-full h-11'>Cart ({cartCount})</button>
+
+                </div>
+                <div className="tabs tabs-box justify-center bg-transparent gap-2">
+                    <input onClick={() => setActiveTab("tool")} type="radio" name="my_tabs_1" className="tab font-semibold rounded-full w-24" aria-label="Products" defaultChecked />
+                    <input onClick={() => setActiveTab("cart")} type="radio" name="my_tabs_1" className="tab font-semibold rounded-full w-24" aria-label={`Cart (${cartCount})`} />
                 </div>
             </div>
             <div className='grid grid-cols-3 max-sm:grid-cols-1 gap-8'>
