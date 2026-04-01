@@ -7,6 +7,7 @@ import Pricing from './component/Pricing'
 import Spliter from './component/Spliter'
 import Workflow from './component/Workflow'
 import Footer from './component/Footer'
+import Tools from './component/Tools'
 
 
 
@@ -29,6 +30,7 @@ function App() {
       <main className='manrope'>
         <HeroSection></HeroSection>
         <Spliter></Spliter>
+        <Tools></Tools>
         <Begain></Begain>
         <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
           <Pricing pricingPromise={pricingPromise}></Pricing>
