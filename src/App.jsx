@@ -9,6 +9,7 @@ import Workflow from './component/Workflow'
 import Footer from './component/Footer'
 import Tools from './component/Tools'
 import Cart from './component/Cart'
+import ToolsHeader from './component/ToolsHeader'
 
 const pricingData = async () => {
   const res = await fetch("/pricing.json");
@@ -36,6 +37,7 @@ function App() {
         <HeroSection></HeroSection>
         <Spliter></Spliter>
         <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
+          <ToolsHeader></ToolsHeader>
           {activeTab === "tools" && < Tools setActiveTab={setActiveTab} toolsPrice={toolsPrice}></Tools>}
           {activeTab === "cart" && <Cart></Cart>}
         </Suspense>
