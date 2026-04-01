@@ -25,6 +25,9 @@ function App() {
   const toolsPrice = toosPriceData();
   // console.log(toolsPrice);
 
+
+  // Set Active is here so don't mistake again
+
   const [activeTab, setActiveTab] = useState("tools");
   console.log(activeTab);
 
@@ -36,13 +39,23 @@ function App() {
       <main className='manrope'>
         <HeroSection></HeroSection>
         <Spliter></Spliter>
-        <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
-          <ToolsHeader></ToolsHeader>
-          {activeTab === "tools" && < Tools setActiveTab={setActiveTab} toolsPrice={toolsPrice}></Tools>}
-          {activeTab === "cart" && <Cart></Cart>}
+        <ToolsHeader setActiveTab={setActiveTab}></ToolsHeader>
+        <div className="pt-8 tabs gap-1 tabs-box justify-center bg-[#F9FAFC]">
+          <input type="radio" name="my_tabs_1" className="tab rounded-full" aria-label="Products" onClick={() => setActiveTab('tools')} defaultChecked />
+          <input type="radio" onClick={() => setActiveTab("cart")} name="my_tabs_1" className="tab rounded-full" aria-label="Cart (2)" />
+        </div>
+        <Suspense fallback={
+          <div className='flex justify-center items-center pt-26'>
+            <div className="skeleton h-screen w-304 rounded-2xl"></div>
+          </div>
+        }>
+          {activeTab === "tools" ? < Tools toolsPrice={toolsPrice}></Tools> : null}
+          {activeTab === "cart" ? <Cart></Cart> : null}
         </Suspense>
         <Begain></Begain>
-        <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
+        <Suspense fallback={
+          <span className="skeleton skeleton-text">AI is thinking harder...</span>
+        }>
           <Pricing pricingPromise={pricingPromise}></Pricing>
         </Suspense>
         <Workflow></Workflow>
