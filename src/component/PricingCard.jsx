@@ -1,7 +1,7 @@
 import React from 'react';
 
 const PricingCard = ({ datas }) => {
-    console.log(datas);
+    // console.log(datas);
     return (
         <div>
             <div className={`card rounded-2xl shadow-sm relative ${datas.isPopular ? 'bg-[rgb(255,84,175)] text-white' : 'bg-[#00000007]'

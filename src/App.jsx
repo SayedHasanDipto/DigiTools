@@ -9,18 +9,19 @@ import Workflow from './component/Workflow'
 import Footer from './component/Footer'
 import Tools from './component/Tools'
 
-
-
 const pricingData = async () => {
   const res = await fetch("/pricing.json");
   return res.json();
 }
 
-
-
+const toosPriceData = async () => {
+  const res = await fetch("/toolspricing.json")
+  return res.json();
+}
 function App() {
-
   const pricingPromise = pricingData();
+  const toolsPrice = toosPriceData();
+  // console.log(toolsPrice);
 
   return (
     <>
@@ -30,7 +31,9 @@ function App() {
       <main className='manrope'>
         <HeroSection></HeroSection>
         <Spliter></Spliter>
-        <Tools></Tools>
+        <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
+          <Tools toolsPrice={toolsPrice}></Tools>
+        </Suspense>
         <Begain></Begain>
         <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
           <Pricing pricingPromise={pricingPromise}></Pricing>
