@@ -10,7 +10,7 @@ const Workflow = () => {
             <div className='text-center'>
                 <div className='mb-4 flex gap-4 justify-center items-center'>
                     <button className='btn text-[rgb(255,84,175,175)] rounded-full'>Explore Products</button>
-                    <button className='btn btn-outline text-white rounded-full'>View Pricing</button>
+                    <button className='btn btn-outline text-white rounded-full hover:text-[rgb(255,84,175,175)]'>View Pricing</button>
                 </div>
                 <p className='text-white'>14-day free trial • No credit card required • Cancel anytime</p>
             </div>

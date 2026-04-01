@@ -31,7 +31,7 @@ const PricingCard = ({ datas }) => {
                         }
                     </ul>
                     <div className="mt-6">
-                        <button className={`btn ${datas.isPopular ? 'btn' : 'btn-secondary'} rounded-full btn-block h-13`}>Subscribe</button>
+                        <button className={`btn ${datas.isPopular ? 'btn' : 'btn-secondary'} rounded-full btn-block h-13 w-full`}>Subscribe</button>
                     </div>
                 </div>
             </div>
