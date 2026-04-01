@@ -1,10 +1,18 @@
 import React, { use } from 'react';
 import ToolsCard from './ToolsCard';
+import { useState } from 'react';
 
 const Tools = ({ toolsPrice }) => {
     // console.log(toolsPrice);
     const data = use(toolsPrice);
     // console.log(data);
+
+    const [cartCount, setCartCount] = useState(0);
+
+    const handleAddToCart = () => {
+        setCartCount(cartCount + 1);
+    };
+
     return (
         <div className='min-h-screen pt-50 flex-col gap-10 flex items-center max-sm:mt-12 justify-center bg-[#F9FAFC]'>
             <div className='space-y-4 text-center'>
@@ -12,12 +20,12 @@ const Tools = ({ toolsPrice }) => {
                 <p className='text-[#627382] w-136 max-sm:w-96 mx-auto leading-6'>Choose from our curated collection of premium digital products designed to boost your productivity and creativity.</p>
                 <div className='flex w-60 h-14 mx-auto justify-around items-center gap-4 bg-base-300 rounded-full'>
                     <button className='font-semibold text-white font-lg btn rounded-full btn-secondary h-11'>Products</button>
-                    <button className='font-semibold font-lg btn btn-secondary text-black hover:text-white btn-ghost rounded-full h-11'>Cart (<span>2</span>)</button>
+                    <button className='font-semibold font-lg btn btn-secondary text-black hover:text-white btn-ghost rounded-full h-11'>Cart ({cartCount})</button>
                 </div>
             </div>
             <div className='grid grid-cols-3 max-sm:grid-cols-1 gap-8'>
                 {
-                    data.map(datas => <ToolsCard key={datas.id} datas={datas}></ToolsCard>)
+                    data.map(datas => <ToolsCard key={datas.id} datas={datas} handleAddToCart={handleAddToCart}></ToolsCard>)
                 }
             </div>
         </div>

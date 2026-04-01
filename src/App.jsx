@@ -8,6 +8,7 @@ import Spliter from './component/Spliter'
 import Workflow from './component/Workflow'
 import Footer from './component/Footer'
 import Tools from './component/Tools'
+import Cart from './component/Cart'
 
 const pricingData = async () => {
   const res = await fetch("/pricing.json");
@@ -33,6 +34,7 @@ function App() {
         <Spliter></Spliter>
         <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
           <Tools toolsPrice={toolsPrice}></Tools>
+          <Cart></Cart>
         </Suspense>
         <Begain></Begain>
         <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
