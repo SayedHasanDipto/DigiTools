@@ -48,21 +48,34 @@ function App() {
       <main className='manrope'>
         <HeroSection></HeroSection>
         <Spliter></Spliter>
-        <ToolsHeader setActiveTab={setActiveTab}></ToolsHeader>
-        <div className="pt-8 tabs gap-1 tabs-box justify-center bg-[#F9FAFC]">
-          <input type="radio" name="my_tabs_1" className="tab rounded-full" aria-label="Products" onClick={() => setActiveTab('tools')} defaultChecked />
-          <input type="radio" onClick={() => setActiveTab("cart")} name="my_tabs_1" className="tab rounded-full" aria-label={`Cart ${carts.length}`} />
+        <ToolsHeader></ToolsHeader>
+        <div className="pt-8 tabs gap-2 tabs-box justify-center bg-[#F9FAFC]">
+          <input type="radio"
+            name="my_tabs_1"
+            className={`tab rounded-full ${activeTab === 'tools' ? 'bg-secondary text-white' : ''}`} aria-label="Products"
+            onClick={() => setActiveTab('tools')}
+            defaultChecked />
+          <input type="radio"
+            onClick={() => setActiveTab("cart")}
+            name="my_tabs_1"
+            className={`tab rounded-full ${activeTab === 'cart' ? 'bg-secondary text-white' : ''}`} aria-label={`Cart (${carts.length})`} />
         </div>
-        <Suspense fallback={
-          <span className="loading loading-bars loading-xl"></span>
-        }>
-          {activeTab === "tools" && < Tools carts={carts} setCarts={setCarts} toolsPrice={toolsPrice}></Tools>}
-          {activeTab === "cart" && <Cart carts={carts} handleRemoveFromCart={handleRemoveFromCart}></Cart>}
-        </Suspense>
+        {/* <Suspense> */}
+        {activeTab === "tools" &&
+          <Suspense>
+            < Tools carts={carts} setCarts={setCarts} toolsPrice={toolsPrice}>
+            </Tools>
+          </Suspense>
+        }
+        {activeTab === "cart" &&
+          <Suspense>
+            <Cart carts={carts} handleRemoveFromCart={handleRemoveFromCart}>
+            </Cart>
+          </Suspense>
+        }
+        {/* </Suspense> */}
         <Begain></Begain>
-        <Suspense fallback={
-          <span className="skeleton skeleton-text">AI is thinking harder...</span>
-        }>
+        <Suspense>
           <Pricing pricingPromise={pricingPromise}></Pricing>
         </Suspense>
         <Workflow></Workflow>

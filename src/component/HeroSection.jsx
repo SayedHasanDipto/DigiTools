@@ -16,7 +16,7 @@ const HeroSection = () => {
                         <h1 className='color font-medium'>New: AI-Powered Tools Available</h1>
                     </div>
                 </button>
-                <h1 className='text-7xl max-sm:text-5xl max-lg:w-120 max-lg:text-[3rem] max-sm:w-100 max-sm:text-center font-extrabold text-[#101727] w-2xl leading-20 max-lg:leading-15 mb-4'>Supercharge Your Digital Workflow</h1>
+                <h1 className='text-7xl max-sm:text-5xl max-lg:w-120 max-lg:text-[3rem] max-sm:w-100 max-sm:text-center font-extrabold text-[#101727] w-2xl leading-20 max-lg:leading-15 mb-4'>Supercharge Your <span className='text-[#f43098]'>Digital Workflow</span></h1>
                 <p className='text-lg w-lg leading-8 max-sm:w-88 max-sm:mx-auto max-sm:text-lg'>
                     Access premium AI tools, design assets, templates, and productivity
                     software—all in one place. Start creating faster today. Explore Products
