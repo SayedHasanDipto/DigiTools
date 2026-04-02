@@ -6,8 +6,8 @@ import { BsTwitterX } from "react-icons/bs";
 const Footer = () => {
     return (
         <div className='bg-[#101727] pb-8'>
-            <div className='max-w-7xl max-lg:w-200 mx-auto'>
-                <footer className="footer sm:footer-horizontal text-white pt-32 pb-20">
+            <div className='max-w-7xl max-sm:w-full max-lg:w-200 mx-auto'>
+                <footer className="footer max-sm:justify-center max-sm:justify-items-center sm:footer-horizontal text-white pt-32 pb-20">
                     <aside>
                         <svg
                             width="50"
@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
             <aside className='text-white text-center flex max-w-7xl max-lg:w-200 mx-auto justify-between'>
                 <p className='leading-6'> © {new Date().getFullYear()} Digitools. All rights reserved.</p>
-                <ul className='flex gap-10'>
+                <ul className='flex gap-10 max-sm:hidden'>
                     <li><a href="">Privacy Policy</a></li>
                     <li><a href="">Terms of Service</a></li>
                     <li><a href="">Cookies</a></li>
