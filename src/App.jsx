@@ -35,6 +35,11 @@ function App() {
   const [carts, setCarts] = useState([]);
   console.log(carts);
 
+  const handleRemoveFromCart = (id) => {
+    const remainingCarts = carts.filter(item => item.id !== id);
+    setCarts(remainingCarts);
+  };
+
   return (
     <>
       <header>
@@ -52,7 +57,7 @@ function App() {
           <span className="loading loading-bars loading-xl"></span>
         }>
           {activeTab === "tools" && < Tools carts={carts} setCarts={setCarts} toolsPrice={toolsPrice}></Tools>}
-          {activeTab === "cart" && <Cart carts={carts}></Cart>}
+          {activeTab === "cart" && <Cart carts={carts} handleRemoveFromCart={handleRemoveFromCart}></Cart>}
         </Suspense>
         <Begain></Begain>
         <Suspense fallback={

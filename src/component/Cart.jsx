@@ -1,7 +1,7 @@
 import React from 'react';
 import CartCards from './CartCards';
 
-const Cart = ({ carts }) => {
+const Cart = ({ carts, handleRemoveFromCart }) => {
     // console.log(carts);
     console.log("Cart Data inside Component:", carts)
     return (
@@ -23,7 +23,7 @@ const Cart = ({ carts }) => {
                                         </div>
                                     </div>
                                     <div>
-                                        <button className="btn btn-soft btn-secondary rounded-full">Remove</button>
+                                        <button onClick={() => handleRemoveFromCart(item.id)} className="btn btn-soft btn-secondary rounded-full">Remove</button>
                                     </div>
                                 </div>
 
