@@ -31,6 +31,10 @@ function App() {
   const [activeTab, setActiveTab] = useState("tools");
   console.log(activeTab);
 
+
+  const [carts, setCarts] = useState([]);
+  console.log(carts);
+
   return (
     <>
       <header>
@@ -45,12 +49,10 @@ function App() {
           <input type="radio" onClick={() => setActiveTab("cart")} name="my_tabs_1" className="tab rounded-full" aria-label="Cart (2)" />
         </div>
         <Suspense fallback={
-          <div className='flex justify-center items-center pt-26'>
-            <div className="skeleton h-screen w-304 rounded-2xl"></div>
-          </div>
+          <span className="loading loading-bars loading-xl"></span>
         }>
-          {activeTab === "tools" ? < Tools toolsPrice={toolsPrice}></Tools> : null}
-          {activeTab === "cart" ? <Cart></Cart> : null}
+          {activeTab === "tools" && < Tools carts={carts} setCarts={setCarts} toolsPrice={toolsPrice}></Tools>}
+          {activeTab === "cart" && <Cart carts={carts}></Cart>}
         </Suspense>
         <Begain></Begain>
         <Suspense fallback={

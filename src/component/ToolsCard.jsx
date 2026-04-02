@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
 import writing from '../assets/products/writing_2327400 1.png'
 
-const ToolsCard = ({ datas, handleAddToCart }) => {
+const ToolsCard = ({ datas, handleAddToCart, carts, setCarts }) => {
     // console.log(datas);
+    // console.log(carts);
+
 
     const [isBtnTrue, setIsBtnTrue] = useState(false);
 
     const handleClick = () => {
         setIsBtnTrue(true);
         handleAddToCart();
+        setCarts([...carts, datas]);
     };
 
     return (
