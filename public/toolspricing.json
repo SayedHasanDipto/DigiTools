@@ -15,7 +15,8 @@
             "Grammar checker"
         ],
         "buttonText": "Buy Now",
-        "icon": "✍️"
+        "icon": "✍️",
+        "img": "https://i.ibb.co.com/v47v4q5n/writing-2327400-1.png"
     },
     {
         "id": "design-templates-pack",
@@ -33,7 +34,8 @@
             "Commercial license"
         ],
         "buttonText": "Buy Now",
-        "icon": "🎨"
+        "icon": "🎨",
+        "img": "https://i.ibb.co.com/BbbftTW/design-tool.png"
     },
     {
         "id": "premium-stock-assets",
@@ -51,7 +53,8 @@
             "No attribution"
         ],
         "buttonText": "Buy Now",
-        "icon": "📷"
+        "icon": "📷",
+        "img": "https://i.ibb.co.com/Ps69W0x0/camera.png"
     },
     {
         "id": "automation-toolkit",
@@ -69,7 +72,8 @@
             "Custom workflows"
         ],
         "buttonText": "Buy Now",
-        "icon": "⚙️"
+        "icon": "⚙️",
+        "img": "https://i.ibb.co.com/xtfhRkzx/operation.png"
     },
     {
         "id": "resume-builder-pro",
@@ -87,7 +91,8 @@
             "Export to PDF"
         ],
         "buttonText": "Buy Now",
-        "icon": "📄"
+        "icon": "📄",
+        "img": "https://i.ibb.co.com/jkTskvyX/portfolio.png"
     },
     {
         "id": "social-media-content-kit",
@@ -105,6 +110,7 @@
             "Analytics dashboard"
         ],
         "buttonText": "Buy Now",
-        "icon": "📱"
+        "icon": "📱",
+        "img": "https://i.ibb.co.com/Gv2rx0xR/social-media.png"
     }
 ]

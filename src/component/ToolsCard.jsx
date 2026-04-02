@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import writing from '../assets/products/writing_2327400 1.png'
 
 const ToolsCard = ({ datas, handleAddToCart, carts, setCarts }) => {
     // console.log(datas);
@@ -21,9 +20,7 @@ const ToolsCard = ({ datas, handleAddToCart, carts, setCarts }) => {
                     <div className="relative">
                         <span className="badge badge-xs badge-warning absolute top-0 right-0">{datas.tag}</span>
                         <div className='my-4'>
-                            <img src={
-                                writing
-                            } alt="" />
+                            <img src={datas.img} alt="" />
                         </div>
                         <div className="flex justify-between flex-col space-y-3">
                             <h2 className="text-2xl font-bold">{datas.title}</h2>

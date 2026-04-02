@@ -5,27 +5,31 @@ const Cart = ({ carts }) => {
     // console.log(carts);
     console.log("Cart Data inside Component:", carts)
     return (
-        <div>
-            <div className='bg-red-400 p-10'>
-                <h1 className='text-2xl font-bold'>Your Carts: {carts.length}</h1>
-                {/* {
-                    carts.map(cartData => <CartCards key={cartData.id} cartData={cartData} />)
-                } */}
-
-
+        <div className='mx-auto bg-[#F9FAFC]'>
+            <div className='bg-base-100 p-10 w-304 mx-auto rounded-2xl'>
+                <h1 className='text-2xl font-bold texxt-[#101727] mb-6'>Your Carts: {carts.length}</h1>
                 <div className='cartData'>
-                    {carts.map((item) => (
-                        <div key={item.id} className="border p-4 mb-2">
-                            <h2>{item.title}</h2>
-                            <p>Price: ${item.price.amount}</p> {/* শুধু item.price দিলে কাজ করবে না */}
-                            <p>{item.description}</p>
-                            <ul>
-                                {item.features.map((feature, index) => (
-                                    <li key={index}>{feature}</li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                    <div className='space-y-4'>
+                        {carts.map((item) => (
+                            <div key={item.id} className="rounded-2xl p-4 bg-[#0000000a] h-24 flex flex-col justify-center">
+                                <div className='flex items-center justify-between'>
+                                    <div className='flex items-center gap-4'>
+                                        <div>
+                                            <img src={item.img} alt="" />
+                                        </div>
+                                        <div>
+                                            <h2 className='mb-2 text-xl text-[#101727] font-semibold'>{item.title}</h2>
+                                            <p className='leading-5 text-[#627382}'>${item.price.amount}</p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button className="btn btn-soft btn-secondary rounded-full">Remove</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
