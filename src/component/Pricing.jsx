@@ -2,9 +2,7 @@ import React, { use } from 'react';
 import PricingCard from './PricingCard';
 
 const Pricing = ({ pricingPromise }) => {
-    // console.log(pricingPromise);
     const data = use(pricingPromise);
-    // console.log(data);
     return (
         <div className='max-w-7xl max-lg:py-20 mx-auto'>
             <div className='max-sm:mt-6 min-h-screen flex items-center justify-center flex-col mx-auto'>
