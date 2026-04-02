@@ -43,7 +43,7 @@ function App() {
   return (
     <>
       <header>
-        <Navbar></Navbar>
+        <Navbar carts={carts}></Navbar>
       </header>
       <main className='manrope'>
         <HeroSection></HeroSection>

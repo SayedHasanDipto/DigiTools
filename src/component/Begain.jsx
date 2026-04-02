@@ -5,7 +5,7 @@ import packageImg from '../assets/package.png'
 
 const Begain = () => {
     return (
-        <div className='min-h-screen flex-col gap-10 flex items-center max-sm:mt-12 justify-center bg-[#F9FAFC]'>
+        <div className='min-h-screen pb-20 flex-col gap-10 flex items-center max-sm:mt-12 justify-center bg-[#F9FAFC]'>
             <div className='max-w-7xl mx-auto text-center'>
                 <h1 className='text-[#101727] font-extrabold text-5xl max-sm:text-3xl max-sm:text-center mb-4'>Get Started in 3 Steps</h1>
                 <p className='text-[#627382] leading-5 max-sm:w-[80%]'>Start using premium digital tools in minutes, not hours.</p>

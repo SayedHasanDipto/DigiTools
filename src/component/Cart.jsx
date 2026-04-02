@@ -9,9 +9,9 @@ const Cart = ({ carts, handleRemoveFromCart }) => {
     // console.log("Cart Data inside Component:", carts)
 
     return (
-        <div className='pt-24 bg-[#F9FAFC]'>
+        <div className='pt-24 max-lg:pb-20 bg-[#F9FAFC]'>
             <div className='mx-auto bg-[#F9FAFC]'>
-                <div className='bg-base-100 p-10 w-304 mx-auto rounded-2xl'>
+                <div className='bg-base-100 p-10 w-304 max-lg:w-200 mx-auto rounded-2xl'>
                     <h1 className='text-2xl font-bold text-[#101727] mb-6'>Your Carts: {carts.length}</h1>
                     <div className='cartData mb-12'>
                         <div className='space-y-4'>

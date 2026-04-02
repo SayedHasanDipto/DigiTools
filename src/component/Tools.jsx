@@ -16,7 +16,7 @@ const Tools = ({ toolsPrice, carts, setCarts }) => {
     };
 
     return (
-        <div className='min-h-screen flex-col gap-10 flex items-center max-sm:mt-12 justify-center bg-[#F9FAFC]'>
+        <div className='min-h-screen max-lg:py-20 flex-col gap-10 flex items-center max-sm:mt-12 justify-center bg-[#F9FAFC]'>
             <div className='grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-8'>
                 {
                     data.map(datas => <ToolsCard carts={carts} setCarts={setCarts} key={datas.id} datas={datas} handleAddToCart={handleAddToCart}></ToolsCard>)
