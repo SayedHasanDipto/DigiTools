@@ -46,7 +46,7 @@ function App() {
         <ToolsHeader setActiveTab={setActiveTab}></ToolsHeader>
         <div className="pt-8 tabs gap-1 tabs-box justify-center bg-[#F9FAFC]">
           <input type="radio" name="my_tabs_1" className="tab rounded-full" aria-label="Products" onClick={() => setActiveTab('tools')} defaultChecked />
-          <input type="radio" onClick={() => setActiveTab("cart")} name="my_tabs_1" className="tab rounded-full" aria-label="Cart (2)" />
+          <input type="radio" onClick={() => setActiveTab("cart")} name="my_tabs_1" className="tab rounded-full" aria-label={`Cart ${carts.length}`} />
         </div>
         <Suspense fallback={
           <span className="loading loading-bars loading-xl"></span>
