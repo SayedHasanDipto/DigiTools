@@ -24,17 +24,10 @@ function App() {
   const pricingPromise = pricingData();
   const toolsPrice = toosPriceData();
   // console.log(toolsPrice);
-
-
-  // Set Active is here so don't mistake again
-
   const [activeTab, setActiveTab] = useState("tools");
   console.log(activeTab);
-
-
   const [carts, setCarts] = useState([]);
   console.log(carts);
-
   const handleRemoveFromCart = (id) => {
     const remainingCarts = carts.filter(item => item.id !== id);
     setCarts(remainingCarts);
