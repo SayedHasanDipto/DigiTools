@@ -4,7 +4,7 @@ const CartCards = ({ cartData }) => {
     console.log("CartCard er data paisi", cartData);
     return (
         <div>
-            <h1>Hi</h1>
+            <h1>This is a cartCard</h1>
         </div>
     );
 };
